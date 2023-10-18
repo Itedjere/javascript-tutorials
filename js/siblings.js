@@ -28,22 +28,22 @@ const siblings = [
 
 let text = "";
 
-function getSibling(sibling) {
+function getOgbolorSoup(sibling) {
 	return `<li
-							class="list-group-item d-flex justify-content-between align-items-start"
-						>
-							<div class="ms-2 me-auto">
-								<div class="fw-bold">${sibling.name}</div>
-								${sibling.gender}
-							</div>
-							<span class="badge bg-primary rounded-pill"
-								>${sibling.age}</span
-							>
-						</li>`;
+				class="list-group-item d-flex justify-content-between align-items-start"
+			>
+				<div class="ms-2 me-auto">
+					<div class="fw-bold">${sibling.name}</div>
+					${sibling.gender}
+				</div>
+				<span class="badge bg-primary rounded-pill"
+					>${sibling.age}</span
+				>
+			</li>`;
 }
 
 for (let sibling of siblings) {
-	text += getSibling(sibling);
+	text += getOgbolorSoup(sibling);
 }
 
 document.getElementById("siblingsList").innerHTML = text;
